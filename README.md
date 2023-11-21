@@ -457,3 +457,427 @@ You can click the Preview link to take a look at your changes.
 </body>
 
 </html>
+
+<!---css--->
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+::root {
+   --bg-white:white;
+   --primary-text:black;
+   --secondary-color:#AAFF00;
+   --light-color: #e2f6de;
+   --dark-color: black;
+   --text-white:white;
+   --text-gray:#dee2e6;
+   --anchor-color:blue;
+
+   --primary-font:'Barlow Condensed',sans-serif;
+   --secondary-font:'Robot',sans-serif;
+}
+
+body,
+html{
+	color:var(--primary-text);
+	font-size: 10px;
+	font-weight: 400;
+	font-family: var(--primary-font);
+	scroll-behavior: smooth;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+	margin: 0;
+}
+
+h1{
+	font-size: 9rem;
+	line-height: 1.4;
+	font-weight: 600;
+	color: var(--primary-text);
+}
+
+h2{
+	color: var(--primary-text);
+    font-size: 4.7rem;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: capitalize;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+h3{
+	color: var(--text-white);
+	font-size: 3.1rem;
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+h4{
+	font-size: 2.5rem;
+	font-weight: 700;
+	line-height: 1;
+	color: var(--primary-text);
+}
+
+p{
+	font-size: 1.6rem;
+	line-height: 1.6;
+	margin-top: 1rem;
+	columns: var(--primary-text);
+	font-family: var(--primary-font);
+}
+
+embed,
+iframe,
+img,
+object{
+	max-width: 100%;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+button{
+	text-decoration: none;
+	outline: 0;
+}
+
+li a{
+	color: var(--text-white);
+}
+
+a:hover,
+button:hover{
+	-webkit-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+}
+
+.main-btn{
+	position: relative;
+	color: var(--bg-white);
+	background: linear-gradient(to right, darkgreen, lightgreen);
+	z-index: 1;
+	overflow: hidden;
+	border: 0.2rem solid var(--bg-white);
+	border-radius: 3.5rem;
+	text-transform: uppercase;
+	padding: 1rem 3.5rem;
+	font-weight: 600;
+	font-size: 1.8rem;
+	margin-top: 1.5rem;
+	letter-spacing: 0.2rem;
+}
+
+.main-btn:hover{
+	background: var(--bg-white);
+	color: var(--secondary-color);
+	border: 0.2rem solid green;
+}
+
+section{
+	padding: 5rem 0;
+}
+.section-title{
+	font-size: 4rem;
+	font-weight: 600;
+	color: var(--primary-text);
+text-transform: capitalize;
+margin-bottom: 2rem;
+}
+.section-subtitle{
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--primary-text);
+	font-family: var(--secondary-font);
+	max-width: 40%;
+	margin: auto;
+	margin-bottom: 1.5rem;
+}
+
+.about .banner_section,
+.product .banner_section,
+.gallery .banner_section,
+.contact .banner_section{
+background: url('../images/banner-slide/top-banner.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+padding-top: 17rem;
+padding-bottom: 10rem;
+min-height: auto;
+}
+
+
+.header{
+	position:absolute ;
+	width: 100%;
+	top: 20px;
+	left: 0;
+	z-index: 2;
+}
+.header .navbar{
+	background-image: url('../images/header-bg.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	padding: 2rem 5rem;
+}
+.header .navbar-brand{
+	width: 7.5rem;
+	margin-top: -0.1rem;
+}
+.header .navbar-nav .nav-link{
+	color: white;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	font-weight: 600;
+	padding: 0.5rem 2rem;
+	margin: 0 0.2rem;
+	font-family: var(--primary-font);
+}
+
+.header .navbar-toggler{
+	color: white;
+	font-size: 2rem;
+	height: 2.7rem;
+	padding: 0;
+}
+.header .navbar-toggler:focus{
+	outline:none;
+	box-shadow: none;
+}
+
+.header .header_right span{
+	color: white;
+	display: block;
+	font-weight: 700;
+	font-size: 1.4;
+	margin-right: 1rem;
+}
+
+.header .header_right .phone_no{
+	color: white;
+	font-size: 1.6rem;
+}
+
+
+.banner_section{
+	background-image: url('../images/banner-slide/Banner-1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 90vh;
+}
+.banner_section .carousel-item{
+	padding: 3rem;
+	height: 90vh;
+}
+.banner_section .carousel-caption{
+	top: 30%;
+	bottom: 0;
+	left: 3%;
+	right: 0;
+	text-align: left;
+	width: 100%;
+	color: black;
+}
+
+
+.feature_section .feature-box{
+	background-color: transparent;
+	border:0.15rem solid var(--light-color);
+	padding:8rem 0;
+	transition: all 0.3s;
+}
+.feature_section .feature-icon-border{
+	background-color: transparent;
+	border-radius: 50%;
+	border:0.2rem solid var(--light-color);
+	padding: 1.3rem;
+	display: inline-block;
+}
+.feature_section .feature-box .feature-icon{
+	height: 6.5rem;
+	width: 6.5rem;
+	background-color: var(--light-color);
+	margin: auto;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.feature_section .feature-box .feature-icon img{
+	width: 3.7rem;
+}
+.feature_section .feature-box h3{
+	margin-top: 1.5rem;
+	color: var(--primary-text);
+}
+.feature_section .feature-box :hover{
+	background-color: rgb(5, 7, 30);
+	border-color: rgb(5, 7, 30);
+}
+.feature_section .feature-box :hover h3{
+	color: white;
+}
+.feature_section .feature-box :hover .feature-icon-border{
+	border-color: var(--secondary-color);
+}
+
+.landing_about_section{
+	background-image: url("../images/about/about-banner.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 9rem 0;
+}
+.col-sm-12 p{
+	color: var(--primary-text);
+    margin-bottom: 2rem;
+}
+
+.landing-product-section .product-card{
+position: relative;
+overflow: hidden;
+cursor: pointer;
+border: 0.2rem solid var(--light-color);
+padding: 2rem 1rem;
+transition: all 0.3s;
+}
+.landing-product-section .product-card h3{
+	color: var(--primary-text);
+}
+.landing-product-section .product-card span{
+	font-size: 1.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: lightgreen;
+	margin-right: 0.5rem;
+	text-decoration: line-through;
+	transition: all 0.3s;
+}
+
+.testimonial-section{
+	background-color: rgb(210, 243, 210);
+	padding-bottom: 8rem;
+}
+.testimonial-section .carousel-indicators{
+	bottom: -6rem;
+}
+.testimonial-section .carousel-indicators button{
+	background-color: darkgreen;
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+}
+
+.img-fluid {
+	height: 100%;
+	width: 100%;
+}
+
+.footer-wrapper{
+	background: url('../images/footer-bg/footer_bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	padding-top: 15rem;
+	padding-bottom: 0rem;
+}
+.footer-wrapper h5{
+	color: white;
+	font-size: 2.5rem;
+	margin-bottom: 1.25rem;
+}
+.footer-wrapper ul li{
+	margin-bottom: 0.5rem;
+	list-style: none;
+}
+.footer-wrapper .company-details{
+	font-size: 1.4rem;
+}
+.footer-wrapper .contact-info li a{
+	color: gray;
+	font-size: 1.6rem;
+}
+.footer-wrapper .link-widget li a,
+.footer-wrapper p{
+	color: gray;
+	font-size: 1.6rem;
+	padding-left: 1.5rem;
+	position: relative;
+	transition: all 0.3s ease-out 0s;
+}
+.footer-wrapper .link-widget li a:hover{
+	margin-left: .625rem;
+	color: lightgreen;
+}
+.footer-wrapper .social-network a{
+	width: 3.5rem;
+	height: 3.5rem;
+	line-height: 3.2rem;
+	margin: .5rem;
+	display: inline-block;
+	border: 0.125rem solid gray;
+	color: gray;
+	font-size: 1.2rem;
+	text-align: center;
+	border-radius: 100%;
+	transition: all 0.3s;
+}
+.footer-wrapper .social-network a:hover{
+	background-color: lightgreen;
+	border-color: lightgreen;
+	color: white;
+}
+.footer-wrapper .form-control{
+	font-size: 2rem;
+	color: white;
+}
+.footer-wrapper .copyright-section{
+	text-align: center;
+	margin-top: 5rem;
+}
+.footer-wrapper .copyright-section p{
+    margin-top: 0;
+	padding: 3rem;
+	line-height: 0;
+}
+.footer-wrapper .copyright-section a{
+	font-weight: 600;
+}
+
+.about .about-details p{
+	color: var(--primary-text);
+}
+.my-hope{
+	padding-top: 20rem;
+}
+
+.product .product-details p{
+	margin-bottom: 1.5rem;
+}
